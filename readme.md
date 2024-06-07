@@ -74,6 +74,7 @@ Partage de veille technologique :
 - Titre
 - Description
 - Lien vers la ressource
+
 Les articles de veille technologique seront classés par ordre décroissant (les plus récents en
 haut).
 
@@ -94,10 +95,11 @@ bon pour l’expérience utilisateur. Utiliser un conteneur pour votre contenu.
 Le conteneur est centré horizontalement dans la page.
 Choisissez la taille en fonction du visuel que vous souhaitez mais il ne doit pas dépasser
 1200px de large ;
+
 Navigation
-- Une barre de navigation qui renvoie vers les pages du site (Accueil, Contact, CV, *Réalisa-
-tions, *Veille) ;
+- Une barre de navigation qui renvoie vers les pages du site (Accueil, Contact, CV, *Réalisations, *Veille) ;
 - La barre de navigation sera fixe. Elle restera en place lorsque vous scrollerai vers le bas ;
+
 Footer
 - Le footer contient une liste des pages de votre sites ;
 - Il rappelle également vos informations de contact importante ;
