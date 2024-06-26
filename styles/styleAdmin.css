@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+      box-sizing: border-box;
+}
+
+html {
+      margin: 0;
+}
+
+body {
+      display : flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction : column;
+      
+}

@@ -5,12 +5,17 @@
 }
 
 :root {
-      --main-color : lightcoral;
+      --secondary-color: lightcoral;
 
 }
 
 html {
       scroll-behavior: smooth;
+}
+
+body {
+      display: flex;
+      flex-direction: column;
 }
 
 
@@ -39,7 +44,7 @@ footer {
       height: 3rem;
       position: sticky;
       bottom: 0;
-      background-color: var(--main-color);
+      background-color: var(--secondary-color);
 }
 
 .footerContainer {
