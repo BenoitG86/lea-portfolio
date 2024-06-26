@@ -5,8 +5,20 @@
 }
 
 :root {
+      --main-color: lightblue;
       --secondary-color: lightcoral;
+      --main-font: "Hypero", Courier, monospace;
+      --secondary-font: "Cafe", Courier, monospace;
+}
 
+@font-face {
+      font-family: "Hypero";
+      src: url(../font/HyperoRegular.otf) format('opentype'), url(../font/HyperoRegular.ttf) format('truetype');
+}
+
+@font-face {
+      font-family: "Cafe";
+      src: url(../font/Cafe.otf) format('opentype'), url(../font/Cafe.ttf) format('truetype');
 }
 
 html {
@@ -16,6 +28,7 @@ html {
 body {
       display: flex;
       flex-direction: column;
+      font-family: var(--main-font);
 }
 
 
@@ -28,9 +41,14 @@ header {
 
 header img {
       width: 100%;
+
 }
 
 /* --------------------- */
+
+.imgProjet {
+      width: 200px;
+}
 
 
 /* --------------------- */

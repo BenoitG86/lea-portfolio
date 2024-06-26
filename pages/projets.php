@@ -1,3 +1,13 @@
+<?php
+
+include '../includes/dbconnect.php';
+
+$showProjetsSQL = "SELECT * FROM `projets` ";
+$readProjetsSQL =  mysqli_query($connexion, $showProjetsSQL);
+$readProjetsCheck = mysqli_num_rows($readProjetsSQL);
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -29,23 +39,24 @@
       </header>
 
       <main>
-      <div class="projet">
-            <h2>Projet n°1</h2>
-            <p>Petit projet de calculatrice</p>
-            <a href=""><img src="" alt=""></a>
-      </div>
-
-      <div class="projet">
-            <h2>Projet n°2</h2>
-            <p>Intégration simple et ajout de fonctionnalités d'accessibilité</p>
-            <a href=""><img src="" alt=""></a>
-      </div>
-
-      <div class="projet">
-            <h2>Projet n°3</h2>
-            <p>Petit projet de carousel / slider</p>
-            <a href=""><img src="" alt=""></a>
-      </div>
+      <?php
+            if ($readProjetsCheck > 0) {
+                  $projets = mysqli_fetch_all($readProjetsSQL, MYSQLI_ASSOC);
+                  foreach ($projets as $projet) {
+                        echo
+                        '<div class="projet">
+                              <h2>' . $projet['name_projet'] . '</h2>
+                              <a href="' . $projet['link_projet'] . '"><img src="../' . $projet['img_projet'] . '" alt="" style="imgProjet"></a>
+                              <p class="description">' . $projet['descr_projet'] . '</p>
+                        </div>
+'
+                        ;
+                  }
+            } else {
+                  echo "Erreur : " . mysqli_error($connexion);
+            }
+            mysqli_close($connexion);
+            ?>
 
 
       </main>
