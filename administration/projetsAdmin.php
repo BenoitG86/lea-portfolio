@@ -51,7 +51,7 @@ $readProjetsCheck = mysqli_num_rows($readProjetsSQL);
                               <a href="' . $projet['link_projet'] . '"><img src="../' . $projet['img_projet'] . '" alt="" style="imgProjet"></a>
                               <p class="description">' . $projet['descr_projet'] . '</p>
                               <form action="../includes/formDeleteP.php" method="post" onsubmit="return confirm(`Do you really want to submit the form?`);">
-                                    <input type="text" name="id_projet" value="' . $projet['id_projet'] . '">                  
+                                    <input type="hidden" name="id_projet" value="' . $projet['id_projet'] . '">                  
                                     <input type="submit" value="Supprimer">
                               </form>';
                   }
